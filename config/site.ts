@@ -8,6 +8,12 @@ export type FaseId = 1 | 2 | 3 | 4;
 export const site = {
   nome: 'Alfabetiza por Fase',
   preco: 'R$ 19,90',
+  /** Preço em que a versão anterior (Kit Alfabetização Estruturada) estava sendo vendida. */
+  precoAncora: 'R$ 79,90',
+  rotuloAncora: 'De',
+  rotuloPreco: 'por',
+  srAncora: 'Preço anterior:',
+  srPreco: 'Preço atual:',
   checkoutUrl: 'https://pay.wiapy.com/00LGDOEjv8wX',
   emailSuporte: 'sup.ajuda.digital@gmail.com',
   // TODO: preencher com a URL final (domínio próprio, se houver). Usada no SEO e no Open Graph.
@@ -265,8 +271,6 @@ export const site = {
     garantiaTitulo: 'Garantia de 7 dias.',
     garantiaTexto:
       'Use o app, imprima as fichas, faça as aulas. Se não fizer sentido para você, devolvemos 100% do valor.',
-    extras:
-      'No checkout, você pode adicionar materiais extras: leitura fluente, grafomotricidade, jogos silábicos e cadernos de números e cores.',
     colunas: [
       {
         titulo: 'Modo Turma',

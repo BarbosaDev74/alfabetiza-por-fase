@@ -37,7 +37,16 @@ export function BarraMobile() {
       )}
     >
       <div className="mx-auto flex max-w-md items-center gap-3">
-        <p className="font-titulo text-2xl font-semibold text-tinta">{site.preco}</p>
+        <p className="flex flex-col leading-none">
+          <del className="text-[0.85rem] font-semibold text-suave decoration-f1-forte decoration-2">
+            <span className="sr-only">{site.srAncora} </span>
+            {site.precoAncora}
+          </del>
+          <span className="mt-0.5 font-titulo text-2xl font-semibold text-tinta">
+            <span className="sr-only">{site.srPreco} </span>
+            {site.preco}
+          </span>
+        </p>
         <a
           href="#oferta"
           tabIndex={visivel ? 0 : -1}

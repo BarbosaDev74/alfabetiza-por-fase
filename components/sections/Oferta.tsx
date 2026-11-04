@@ -68,11 +68,22 @@ export function Oferta() {
               </ul>
 
               <div className="mt-8 rounded-medio bg-creme p-5 text-center">
-                <p className="font-titulo text-[3rem] font-semibold leading-none text-tinta">{site.preco}</p>
+                <p className="text-[1.05rem] font-semibold text-suave">
+                  {site.rotuloAncora}{' '}
+                  <del className="decoration-f1-forte decoration-2">
+                    <span className="sr-only">{site.srAncora} </span>
+                    {site.precoAncora}
+                  </del>{' '}
+                  {site.rotuloPreco}
+                </p>
+                <p className="mt-1 font-titulo text-[3rem] font-semibold leading-none text-tinta">
+                  <span className="sr-only">{site.srPreco} </span>
+                  {site.preco}
+                </p>
                 <p className="mt-2 text-[0.98rem] font-semibold text-suave">{o.pagamento}</p>
               </div>
 
-              <BotaoCheckout url={site.checkoutUrl} className="mt-6 w-full text-[1.15rem]">
+              <BotaoCheckout url={site.checkoutUrl} className="mt-6 w-full px-5 text-[1.02rem] sm:text-[1.15rem]">
                 {o.botao}
               </BotaoCheckout>
 
@@ -104,7 +115,6 @@ export function Oferta() {
           </div>
         </div>
 
-        <p className="mx-auto mt-8 max-w-2xl text-center text-[0.98rem] text-suave">{o.extras}</p>
       </div>
     </section>
   );
