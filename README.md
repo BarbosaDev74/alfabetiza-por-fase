@@ -12,7 +12,7 @@ npm run build
 
 ## Onde mexer
 
-- **Todo o texto e os links:** `config/site.ts` (preço, checkout, e-mail, razão social, CNPJ, flag `confirmado2800`).
+- **Todo o texto e os links:** `config/site.ts` (preço, checkout, e-mail, flag `confirmado2800`).
 - **Seções:** `components/sections/`, uma por arquivo, na ordem de `app/page.tsx`.
 - **Imagens:** `public/images/`. Os prints do app foram convertidos para WebP (máx. 2000 px); o Next serve AVIF/WebP no tamanho certo.
 
@@ -32,7 +32,7 @@ UTM (`utm_*`) e `fbclid` da URL são repassados para o link do checkout.
 
 ## TODOs
 
-- `config/site.ts`: `razaoSocial`, `cnpj`, `endereco`, `url`.
+- `config/site.ts`: `url`, se houver domínio próprio.
 - `app/privacidade` e `app/termos`: revisar o texto.
 
 `ficha-impressa.jpg` e `foto-mao-ficha.jpg` foram tirados do vídeo do criativo (9,6 s e 8,4 s), recortados sem legenda, marca d'água e rodapé da ficha.

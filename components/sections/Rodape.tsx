@@ -8,10 +8,6 @@ export function Rodape() {
       <div className="mx-auto flex max-w-site flex-col gap-8 px-4 sm:px-6 md:flex-row md:items-start md:justify-between">
         <div>
           <Logo nome={site.nome} className="sm:h-9" />
-          {/* TODO: razão social e CNPJ reais em config/site.ts */}
-          <p className="mt-4 text-[0.9rem] text-suave">
-            {site.razaoSocial} · CNPJ {site.cnpj}
-          </p>
         </div>
         <nav aria-label="Rodapé" className="flex flex-col gap-6 sm:flex-row sm:gap-12">
           <ul className="space-y-2">

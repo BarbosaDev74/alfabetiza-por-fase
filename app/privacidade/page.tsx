@@ -4,13 +4,12 @@ import { PaginaLegal } from '@/components/ui/PaginaLegal';
 
 export const metadata: Metadata = { title: `Política de privacidade · ${site.nome}`, robots: { index: false } };
 
-// TODO: revisar este texto com quem cuida da parte jurídica e preencher os placeholders em config/site.ts.
+// TODO: revisar este texto com quem cuida da parte jurídica.
 export default function Privacidade() {
   return (
     <PaginaLegal titulo="Política de privacidade">
       <p>
-        Esta política explica como {site.razaoSocial} (CNPJ {site.cnpj}), responsável pelo {site.nome}, trata os seus
-        dados. Endereço: {site.endereco}.
+        Esta política explica como o {site.nome} trata os seus dados.
       </p>
       <h2>Dados coletados nesta página</h2>
       <p>

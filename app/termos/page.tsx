@@ -4,12 +4,12 @@ import { PaginaLegal } from '@/components/ui/PaginaLegal';
 
 export const metadata: Metadata = { title: `Termos de uso · ${site.nome}`, robots: { index: false } };
 
-// TODO: revisar este texto com quem cuida da parte jurídica e preencher os placeholders em config/site.ts.
+// TODO: revisar este texto com quem cuida da parte jurídica.
 export default function Termos() {
   return (
     <PaginaLegal titulo="Termos de uso">
       <p>
-        Estes termos valem para o uso do {site.nome}, oferecido por {site.razaoSocial} (CNPJ {site.cnpj}).
+        Estes termos valem para o uso do {site.nome}.
       </p>
       <h2>O produto</h2>
       <p>
