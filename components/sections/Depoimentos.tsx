@@ -16,21 +16,21 @@ export function Depoimentos({ existentes }: { existentes: Record<string, boolean
       </div>
 
       {/* Grid no desktop, carrossel com rolagem lateral no celular */}
-      <ul className="mx-auto mt-10 flex max-w-site snap-x snap-mandatory gap-4 overflow-x-auto px-4 pb-4 sm:px-6 md:grid md:grid-cols-2 md:overflow-visible lg:grid-cols-4">
+      <ul className="mx-auto mt-10 flex max-w-5xl snap-x snap-mandatory gap-4 overflow-x-auto px-4 pb-4 sm:px-6 md:grid md:grid-cols-2 md:gap-6 md:overflow-visible">
         {d.itens.map((item, i) => (
-          <li key={item.arquivo} className={`w-[80vw] max-w-[22rem] flex-none snap-center rounded-grande ${fundos[i]} p-4 md:w-auto md:max-w-none`}>
+          <li key={item.arquivo} className={`w-[86vw] max-w-[26rem] flex-none snap-center rounded-grande ${fundos[i]} p-4 md:w-auto md:max-w-none`}>
             <figure className="flex h-full flex-col">
-              <div className="relative aspect-[9/14] overflow-hidden rounded-medio bg-white shadow-suave">
+              <div className="relative aspect-[600/480] overflow-hidden rounded-medio bg-[#F4F1EC] shadow-suave">
                 {existentes[item.arquivo] ? (
                   <Image
                     src={`/images/${item.arquivo}`}
                     alt={d.alt}
                     fill
-                    sizes="(min-width:1024px) 280px, (min-width:768px) 45vw, 80vw"
+                    sizes="(min-width:1024px) 480px, (min-width:768px) 45vw, 86vw"
                     className="object-contain"
                   />
                 ) : (
-                  <Placeholder arquivo={item.arquivo} descricao="Print original da mensagem (nome e foto borrados)" />
+                  <Placeholder arquivo={item.arquivo} descricao="Print original da mensagem" />
                 )}
               </div>
               <figcaption className="mt-4 px-1 font-titulo text-[1.1rem] font-semibold leading-snug text-tinta">

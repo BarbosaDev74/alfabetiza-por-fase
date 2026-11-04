@@ -232,8 +232,7 @@ export const site = {
     titulo: 'O que professoras contaram sobre o trabalho por fase',
     subtitulo:
       'Mensagens reais de professoras que usaram o Kit Alfabetização Estruturada, a versão anterior desta oferta.',
-    alt: 'Print de mensagem real de professora (nome e foto borrados)',
-    // TODO: enviar os 4 prints (depo-*.png) para public/images/. Enquanto não existirem, aparece um placeholder.
+    alt: 'Print de mensagem real de professora no WhatsApp',
     itens: [
       { arquivo: 'depo-mariana.png', destaque: '"Em 3 meses estão lendo e escrevendo."' },
       {

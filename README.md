@@ -22,7 +22,6 @@ Coloque em `public/images/` com estes nomes exatos:
 
 | Arquivo | Onde aparece |
 |---|---|
-| `depo-mariana.png`, `depo-alexandra.png`, `depo-luana.png`, `depo-eduarda.png` | Depoimentos (hoje com placeholder) |
 | `ficha-impressa.jpg` | Hero, no lugar da ficha em PNG |
 | `foto-mao-ficha.jpg` | CTA final, no lugar das 4 fichas em leque |
 
@@ -37,4 +36,3 @@ UTM (`utm_*`) e `fbclid` da URL são repassados para o link do checkout.
 
 - `config/site.ts`: `razaoSocial`, `cnpj`, `endereco`, `url`.
 - `app/privacidade` e `app/termos`: revisar o texto.
-- Os 4 prints de depoimento.
