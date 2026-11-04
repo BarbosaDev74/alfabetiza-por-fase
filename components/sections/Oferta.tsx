@@ -9,7 +9,7 @@ function ColunaValor({ indice }: { indice: 0 | 1 }) {
   const Icone = indice === 0 ? Users : Heart;
   return (
     <div className="relative rounded-grande border-2 border-dashed border-teal/25 bg-white/70 p-6">
-      <p className="inline-flex items-center gap-1.5 whitespace-nowrap rounded-full bg-f4-pastel px-3 py-1 text-[0.8rem] font-extrabold text-f4-forte">
+      <p className="inline-flex items-center gap-1.5 whitespace-nowrap rounded-full bg-f4-pastel px-3 py-1 text-[0.8rem] font-extrabold text-[#1E5B22]">
         <Check aria-hidden="true" className="h-3.5 w-3.5" strokeWidth={3.5} />
         {o.selocoluna}
       </p>
