@@ -56,7 +56,7 @@ export function Hero({ fichaImpressa }: { fichaImpressa: boolean }) {
           </div>
           <div className="absolute -bottom-[4%] -left-[3%] w-[27%] -rotate-[7deg]">
             {fichaImpressa ? (
-              <div className="relative aspect-[4/5] overflow-hidden rounded-xl shadow-folha">
+              <div className="relative aspect-[3/4] overflow-hidden rounded-xl shadow-folha ring-4 ring-white">
                 <Image
                   src="/images/ficha-impressa.jpg"
                   alt="Foto real de uma ficha impressa sobre a mesa"

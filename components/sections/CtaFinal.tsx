@@ -25,7 +25,7 @@ export function CtaFinal({ fotoMao }: { fotoMao: boolean }) {
         </div>
 
         {fotoMao ? (
-          <div className="relative aspect-[4/3] overflow-hidden rounded-grande">
+          <div className="relative aspect-[1080/780] overflow-hidden rounded-grande shadow-alta ring-4 ring-white/15">
             <Image src="/images/foto-mao-ficha.jpg" alt={c.altFoto} fill sizes="(min-width:1024px) 520px, 90vw" className="object-cover" />
           </div>
         ) : (

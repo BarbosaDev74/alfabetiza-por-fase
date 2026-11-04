@@ -22,8 +22,7 @@ Coloque em `public/images/` com estes nomes exatos:
 
 | Arquivo | Onde aparece |
 |---|---|
-| `ficha-impressa.jpg` | Hero, no lugar da ficha em PNG |
-| `foto-mao-ficha.jpg` | CTA final, no lugar das 4 fichas em leque |
+| `logo.svg` | Ainda não usado: o logo é montado em código (`components/ui/Logo.tsx`) |
 
 ## Variáveis de ambiente (Vercel)
 
@@ -36,3 +35,5 @@ UTM (`utm_*`) e `fbclid` da URL são repassados para o link do checkout.
 
 - `config/site.ts`: `razaoSocial`, `cnpj`, `endereco`, `url`.
 - `app/privacidade` e `app/termos`: revisar o texto.
+
+`ficha-impressa.jpg` e `foto-mao-ficha.jpg` foram tirados do vídeo do criativo (9,6 s e 8,4 s), recortados sem legenda, marca d'água e rodapé da ficha.
