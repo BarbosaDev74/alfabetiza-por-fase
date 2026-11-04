@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    overflow-x: clip;
+    -webkit-text-size-adjust: 100%;
+  }
+  body {
+    @apply bg-creme font-corpo text-corpo text-tinta antialiased;
+    overflow-x: clip;
+  }
+  ::selection {
+    background: #f2c14e;
+    color: #1f2a37;
+  }
+  :focus-visible {
+    outline: 3px solid #0f6e6e;
+    outline-offset: 3px;
+    border-radius: 0.5rem;
+  }
+  .bg-teal :focus-visible,
+  .bg-teal:focus-visible {
+    outline-color: #f2c14e;
+  }
+  summary::-webkit-details-marker {
+    display: none;
+  }
+}
+
+/* Entrada discreta: só com JS ativo e sem preferência por movimento reduzido */
+@media (prefers-reduced-motion: no-preference) {
+  html.js [data-reveal] {
+    opacity: 0;
+    transform: translateY(16px);
+    transition:
+      opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+      transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  html.js [data-reveal].revelado {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+.galeria-trilho {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(15, 110, 110, 0.35) transparent;
+  scroll-padding-inline: 1rem;
+}
+@media (min-width: 1024px) {
+  .galeria-trilho {
+    scroll-padding-inline: max(1.5rem, calc((100vw - 76rem) / 2 + 1.5rem));
+  }
+}
