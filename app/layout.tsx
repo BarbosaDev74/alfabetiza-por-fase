@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     description: site.seo.description,
     images: ['/og.png'],
   },
-  icons: { icon: '/icon.svg' },
+  icons: { icon: "/icon.svg", apple: "/apple-icon.png" },
 };
 
 export const viewport: Viewport = {

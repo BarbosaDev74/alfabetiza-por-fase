@@ -7,7 +7,7 @@ export function Rodape() {
     <footer className="border-t border-tinta/10 bg-white pb-28 pt-12 lg:pb-12">
       <div className="mx-auto flex max-w-site flex-col gap-8 px-4 sm:px-6 md:flex-row md:items-start md:justify-between">
         <div>
-          <Logo nome={site.nome} />
+          <Logo nome={site.nome} className="sm:h-9" />
           {/* TODO: razão social e CNPJ reais em config/site.ts */}
           <p className="mt-4 text-[0.9rem] text-suave">
             {site.razaoSocial} · CNPJ {site.cnpj}

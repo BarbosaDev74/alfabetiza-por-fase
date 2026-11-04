@@ -1,12 +1,11 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useState, type ReactNode } from 'react';
 import { Menu, X } from 'lucide-react';
 import { site } from '@/config/site';
-import { Logo } from '@/components/ui/Logo';
 import { cn } from '@/lib/utils';
 
-export function Navbar() {
+export function Navbar({ logo }: { logo: ReactNode }) {
   const [aberto, setAberto] = useState(false);
   const [rolou, setRolou] = useState(false);
 
@@ -31,9 +30,9 @@ export function Navbar() {
         rolou || aberto ? 'bg-creme/95 shadow-[0_1px_0_rgba(31,42,55,.08)] backdrop-blur' : 'bg-creme/0',
       )}
     >
-      <nav aria-label="Principal" className="mx-auto flex h-16 max-w-site items-center gap-4 px-4 sm:px-6 lg:h-[4.5rem]">
+      <nav aria-label="Principal" className="mx-auto flex h-16 max-w-site items-center gap-2 px-4 sm:gap-4 sm:px-6 lg:h-[4.5rem]">
         <a href="#topo" className="mr-auto rounded-md" aria-label={`${site.nome}, voltar ao topo`}>
-          <Logo nome={site.nome} />
+          {logo}
         </a>
 
         <ul className="hidden items-center gap-1 lg:flex">

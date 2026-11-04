@@ -1,6 +1,7 @@
 import { existeImagem } from '@/lib/arquivos';
 import { site } from '@/config/site';
 import { Navbar } from '@/components/sections/Navbar';
+import { Logo } from '@/components/ui/Logo';
 import { Hero } from '@/components/sections/Hero';
 import { Confianca } from '@/components/sections/Confianca';
 import { Problema } from '@/components/sections/Problema';
@@ -22,7 +23,7 @@ export default function Page() {
   return (
     <>
       <span id="topo" />
-      <Navbar />
+      <Navbar logo={<Logo nome={site.nome} />} />
       <main id="conteudo">
         <Hero fichaImpressa={existeImagem('ficha-impressa.jpg')} />
         <Confianca />

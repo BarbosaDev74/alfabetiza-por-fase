@@ -22,7 +22,6 @@ Coloque em `public/images/` com estes nomes exatos:
 
 | Arquivo | Onde aparece |
 |---|---|
-| `logo.svg` | Ainda não usado: o logo é montado em código (`components/ui/Logo.tsx`) |
 
 ## Variáveis de ambiente (Vercel)
 
@@ -37,3 +36,7 @@ UTM (`utm_*`) e `fbclid` da URL são repassados para o link do checkout.
 - `app/privacidade` e `app/termos`: revisar o texto.
 
 `ficha-impressa.jpg` e `foto-mao-ficha.jpg` foram tirados do vídeo do criativo (9,6 s e 8,4 s), recortados sem legenda, marca d'água e rodapé da ficha.
+
+## Marca
+
+A letra "a" de alfabetiza: o anel é dividido nas 4 cores das fases, na ordem em que a caneta desenha o "a" (do alto para baixo), e a haste é o teal do app. Arquivos: `public/logo.svg` (fundo claro), `public/logo-branco.svg` (fundo escuro), `public/icon.svg` (favicon) e `public/apple-icon.png`. No site, o logo é renderizado por `components/ui/Logo.tsx` a partir de `logo-paths.ts`, com o texto já convertido em curvas (Fredoka 600/500).
