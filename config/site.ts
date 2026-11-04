@@ -17,7 +17,7 @@ export const site = {
   // TODO: preencher o endereço (aparece só em /privacidade e /termos)
   endereco: '[Endereço]',
   // TODO: preencher com a URL final (domínio próprio, se houver). Usada no SEO e no Open Graph.
-  url: process.env.NEXT_PUBLIC_SITE_URL ?? 'https://alfabetiza-por-fase.vercel.app',
+  url: process.env.NEXT_PUBLIC_SITE_URL ?? 'https://alfabetiza-por-fase-lp.vercel.app',
   /** Só mude para true se o número de 2.800 professoras estiver confirmado. */
   confirmado2800: false,
 
