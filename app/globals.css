@@ -61,3 +61,29 @@
     scroll-padding-inline: max(1.5rem, calc((100vw - 76rem) / 2 + 1.5rem));
   }
 }
+
+/* Pop-ups de desconto */
+@keyframes aviso-entra {
+  from { opacity: 0; transform: translateY(14px) scale(0.98); }
+  to { opacity: 1; transform: none; }
+}
+@keyframes aviso-tempo {
+  from { transform: scaleX(1); }
+  to { transform: scaleX(0); }
+}
+@keyframes modal-entra {
+  from { opacity: 0; transform: translateY(24px) scale(0.97); }
+  to { opacity: 1; transform: none; }
+}
+@keyframes fundo-entra {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.aviso-entra { animation: aviso-entra 0.45s cubic-bezier(0.16, 1, 0.3, 1) both; }
+.aviso-tempo { transform-origin: left; animation-name: aviso-tempo; animation-timing-function: linear; animation-fill-mode: both; }
+.aviso-tempo::after { content: ''; display: block; height: 100%; background: #0f6e6e; opacity: 0.55; }
+.modal-entra { animation: modal-entra 0.5s cubic-bezier(0.16, 1, 0.3, 1) both; }
+.modal-fundo { animation: fundo-entra 0.3s ease both; }
+@media (prefers-reduced-motion: reduce) {
+  .aviso-entra, .modal-entra, .modal-fundo, .aviso-tempo { animation: none; }
+}

@@ -15,6 +15,7 @@ import { Faq } from '@/components/sections/Faq';
 import { CtaFinal } from '@/components/sections/CtaFinal';
 import { Rodape } from '@/components/sections/Rodape';
 import { BarraMobile } from '@/components/sections/BarraMobile';
+import { PopupsDesconto } from '@/components/sections/PopupsDesconto';
 import { Revelar } from '@/components/tracking/Revelar';
 
 export default function Page() {
@@ -39,6 +40,7 @@ export default function Page() {
       </main>
       <Rodape />
       <BarraMobile />
+      <PopupsDesconto />
       <Revelar />
     </>
   );

@@ -272,7 +272,7 @@ export const site = {
     garantiaTexto:
       'Use o app, imprima as fichas, faça as aulas. Se não fizer sentido para você, devolvemos 100% do valor.',
     extras:
-      'No checkout, você pode adicionar materiais extras: leitura fluente, grafomotricidade, jogos silábicos e cadernos de números e cores.',
+      'No checkout, você pode adicionar materiais extras com 40% de desconto: leitura fluente, grafomotricidade, jogos silábicos e cadernos de números e cores.',
     umaOferta: 'Uma compra só: os dois modos já vêm dentro do Alfabetiza por Fase',
     selocoluna: 'Incluso no Alfabetiza por Fase',
     colunas: [
@@ -362,6 +362,55 @@ export const site = {
   },
 
   barraMobile: { botao: 'Quero o app' },
+
+  /**
+   * Pop-ups de desconto. {pct} e {economia} são calculados a partir de precoNum e precoAncoraNum.
+   * Os dois descontos são reais: R$ 79,90 era o preço da oferta anterior, e os extras têm 40% OFF no checkout.
+   */
+  descontos: {
+    precoNum: 19.9,
+    precoAncoraNum: 79.9,
+    pctExtras: 40,
+    avisos: [
+      {
+        selo: '{pct}% OFF',
+        titulo: 'De R$ 79,90 por R$ 19,90',
+        texto: 'Você economiza R$ {economia} no Alfabetiza por Fase.',
+        cta: 'Garantir meus {pct}% OFF',
+      },
+      {
+        selo: '{pctExtras}% OFF nos extras',
+        titulo: 'Materiais extras com {pctExtras}% de desconto',
+        texto: 'Leitura fluente, grafomotricidade, jogos silábicos e cadernos de números e cores, direto no checkout.',
+        cta: 'Ver a oferta',
+      },
+      {
+        selo: 'Exclusivo',
+        titulo: 'Condição exclusiva desta página',
+        texto: '{pct}% OFF no app e {pctExtras}% OFF nos materiais extras, na mesma compra.',
+        cta: 'Aproveitar agora',
+      },
+      {
+        selo: 'Sem risco',
+        titulo: '{pct}% OFF com garantia de 7 dias',
+        texto: 'Use o app, imprima as fichas, faça as aulas. Se não fizer sentido, devolvemos 100% do valor.',
+        cta: 'Garantir meu desconto',
+      },
+    ],
+    fecharAviso: 'Fechar aviso',
+    modal: {
+      selo: 'Desconto exclusivo',
+      titulo: 'Antes de sair: seu desconto de {pct}% ainda está aqui',
+      linhas: [
+        'Alfabetiza por Fase de R$ 79,90 por R$ 19,90',
+        '{pctExtras}% OFF nos materiais extras do checkout',
+        'Garantia de 7 dias, com 100% do valor de volta',
+      ],
+      botao: 'Quero meus {pct}% OFF',
+      continuar: 'Continuar vendo a página',
+      fechar: 'Fechar',
+    },
+  },
 } as const;
 
 export const corDaFase: Record<FaseId, { base: string; pastel: string; forte: string }> = {
