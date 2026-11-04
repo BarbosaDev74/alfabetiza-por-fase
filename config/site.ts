@@ -271,6 +271,10 @@ export const site = {
     garantiaTitulo: 'Garantia de 7 dias.',
     garantiaTexto:
       'Use o app, imprima as fichas, faça as aulas. Se não fizer sentido para você, devolvemos 100% do valor.',
+    extras:
+      'No checkout, você pode adicionar materiais extras: leitura fluente, grafomotricidade, jogos silábicos e cadernos de números e cores.',
+    umaOferta: 'Uma compra só: os dois modos já vêm dentro do Alfabetiza por Fase',
+    selocoluna: 'Incluso no Alfabetiza por Fase',
     colunas: [
       {
         titulo: 'Modo Turma',
