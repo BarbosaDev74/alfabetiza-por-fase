@@ -13,8 +13,8 @@ export default function Privacidade() {
       </p>
       <h2>Dados coletados nesta página</h2>
       <p>
-        Esta página não tem formulário. Podemos usar ferramentas de medição de anúncios, como o Meta Pixel, que registram
-        visitas e cliques para entender o desempenho das campanhas.
+        Esta página não tem formulário. Usamos ferramentas de medição de anúncios, como a UTMify e o Meta Pixel, que registram
+        visitas, cliques e a origem do acesso (parâmetros UTM) para entender o desempenho das campanhas.
       </p>
       <h2>Dados da compra</h2>
       <p>

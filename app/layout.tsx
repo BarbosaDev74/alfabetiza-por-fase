@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from 'next';
 import localFont from 'next/font/local';
 import { site } from '@/config/site';
 import { MetaPixel } from '@/components/tracking/MetaPixel';
+import { PIXEL_UTMIFY, UTMS_UTMIFY_SRC } from '@/config/rastreio';
 import './globals.css';
 
 // Fredoka e Nunito (as mesmas do app), servidas do próprio site.
@@ -52,6 +53,15 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="pt-BR" className={`${fredoka.variable} ${nunito.variable}`} suppressHydrationWarning>
       <head>
         <script dangerouslySetInnerHTML={{ __html: "document.documentElement.classList.add('js')" }} />
+        {/* UTMify: pixel e UTMs */}
+        <script id="pixel-utmify" dangerouslySetInnerHTML={{ __html: PIXEL_UTMIFY }} />
+        <script
+          src={UTMS_UTMIFY_SRC}
+          data-utmify-prevent-xcod-sck=""
+          data-utmify-prevent-subids=""
+          async
+          defer
+        />
       </head>
       <body>
         <a
