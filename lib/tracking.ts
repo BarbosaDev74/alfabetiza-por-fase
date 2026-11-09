@@ -8,7 +8,15 @@ declare global {
   }
 }
 
+/**
+ * Eventos da Meta disparados pelo próprio código da página.
+ * Só valem quando existe NEXT_PUBLIC_META_PIXEL_ID. Sem ela, quem dispara PageView, ViewContent e
+ * InitiateCheckout é o pixel da UTMify (que carrega o fbq sozinho). Disparar aqui também duplicaria os eventos.
+ */
+const PIXEL_PROPRIO = !!process.env.NEXT_PUBLIC_META_PIXEL_ID;
+
 export function track(evento: 'ViewContent' | 'InitiateCheckout', dados?: Record<string, unknown>) {
+  if (!PIXEL_PROPRIO) return;
   if (typeof window === 'undefined' || typeof window.fbq !== 'function') return;
   window.fbq('track', evento, dados);
 }
