@@ -3,12 +3,9 @@ import { site } from '@/config/site';
 import { Navbar } from '@/components/sections/Navbar';
 import { Logo } from '@/components/ui/Logo';
 import { Hero } from '@/components/sections/Hero';
-import { Confianca } from '@/components/sections/Confianca';
-import { Problema } from '@/components/sections/Problema';
-import { Fases } from '@/components/sections/Fases';
-import { Beneficios } from '@/components/sections/Beneficios';
+import { Criancas } from '@/components/sections/Criancas';
+import { Gratis } from '@/components/sections/Gratis';
 import { ComoFunciona } from '@/components/sections/ComoFunciona';
-import { Galeria } from '@/components/sections/Galeria';
 import { Depoimentos } from '@/components/sections/Depoimentos';
 import { Oferta } from '@/components/sections/Oferta';
 import { Faq } from '@/components/sections/Faq';
@@ -24,15 +21,12 @@ export default function Page() {
   return (
     <>
       <span id="topo" />
-      <Navbar logo={<Logo nome={site.nome} />} />
+      <Navbar logo={<Logo nome={site.nome} />} logoClaro={<Logo nome={site.nome} claro />} />
       <main id="conteudo">
-        <Hero fichaImpressa={existeImagem('ficha-impressa.jpg')} />
-        <Confianca />
-        <Problema />
-        <Fases />
-        <Beneficios />
+        <Hero />
+        <Criancas />
+        <Gratis />
         <ComoFunciona />
-        <Galeria />
         <Depoimentos existentes={depos} />
         <Oferta />
         <Faq />

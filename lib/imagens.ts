@@ -19,6 +19,12 @@ export const imagens = {
   'ficha-fase-4': { src: '/images/ficha-fase-4.webp', w: 1588, h: 2246 },
   'hero-app-celular': { src: '/images/hero-app-celular.webp', w: 1170, h: 1992 },
   'hero-app-notebook': { src: '/images/hero-app-notebook.webp', w: 2000, h: 1250 },
+  'crianca-pedro': { src: '/images/crianca-pedro.webp', w: 640, h: 800 },
+  'crianca-julia': { src: '/images/crianca-julia.webp', w: 640, h: 800 },
+  'crianca-davi': { src: '/images/crianca-davi.webp', w: 640, h: 800 },
+  'crianca-lucas': { src: '/images/crianca-lucas.webp', w: 640, h: 800 },
+  'print-turma-por-fase-1': { src: '/images/print-turma-por-fase-1.webp', w: 720, h: 1279 },
+  'print-turma-fichas-grupos-1': { src: '/images/print-turma-fichas-grupos-1.webp', w: 720, h: 1279 },
 } as const;
 
 export type ImagemId = keyof typeof imagens;

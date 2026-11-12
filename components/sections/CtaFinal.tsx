@@ -3,7 +3,7 @@ import { site } from '@/config/site';
 import { BotaoOferta } from '@/components/ui/Botoes';
 import { Foto } from '@/components/ui/Foto';
 import { FolhaA4 } from '@/components/ui/Molduras';
-import { Letra } from '@/components/ui/Rabiscos';
+import { TituloDestaque } from '@/components/ui/TituloDestaque';
 
 const leque = [
   { id: 'ficha-fase-1', cls: 'left-[2%] top-[14%] -rotate-[14deg]' },
@@ -16,11 +16,11 @@ export function CtaFinal({ fotoMao }: { fotoMao: boolean }) {
   const c = site.ctaFinal;
   return (
     <section className="px-4 py-16 sm:px-6 sm:py-20">
-      <div className="relative mx-auto grid max-w-site items-center gap-10 overflow-hidden rounded-[2rem] bg-teal px-6 py-12 sm:px-12 sm:py-16 lg:grid-cols-[1.1fr_1fr]">
-        <Letra letra="a" cor="#FFFFFF" className="absolute -left-2 -top-8 text-[9rem] opacity-[0.07]" />
-        <Letra letra="B" cor="#FFFFFF" className="absolute bottom-[-2.5rem] right-[44%] text-[8rem] opacity-[0.07]" />
+      <div className="relative mx-auto grid max-w-site items-center gap-10 overflow-hidden rounded-[2rem] bg-escuro bg-[radial-gradient(ellipse_at_30%_30%,#1B4B4F_0%,#0D2A2D_65%)] px-6 py-12 sm:px-12 sm:py-16 lg:grid-cols-[1.1fr_1fr]">
         <div className="relative" data-reveal>
-          <h2 className="font-titulo text-h2 font-semibold text-white">{c.titulo}</h2>
+          <h2 className="font-titulo text-h2 font-semibold text-white">
+            <TituloDestaque partes={c.titulo} />
+          </h2>
           <BotaoOferta className="mt-8">{c.botao}</BotaoOferta>
         </div>
 

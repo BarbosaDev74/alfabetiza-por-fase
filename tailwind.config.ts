@@ -6,6 +6,9 @@ const config: Config = {
     extend: {
       colors: {
         creme: '#FDF8F0',
+        // fundo escuro verde-azulado dos anúncios
+        escuro: { DEFAULT: '#0D2A2D', 2: '#123B3F', 3: '#1A4A4E', linha: '#2B5A5E' },
+        ouro: '#F5C451',
         tinta: '#1F2A37',
         suave: '#4B5563',
         teal: { DEFAULT: '#0F6E6E', escuro: '#0B5555', claro: '#E3F1F0' },

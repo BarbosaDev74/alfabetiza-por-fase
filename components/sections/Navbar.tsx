@@ -5,7 +5,7 @@ import { Menu, X } from 'lucide-react';
 import { site } from '@/config/site';
 import { cn } from '@/lib/utils';
 
-export function Navbar({ logo }: { logo: ReactNode }) {
+export function Navbar({ logo, logoClaro }: { logo: ReactNode; logoClaro: ReactNode }) {
   const [aberto, setAberto] = useState(false);
   const [rolou, setRolou] = useState(false);
 
@@ -27,12 +27,12 @@ export function Navbar({ logo }: { logo: ReactNode }) {
     <header
       className={cn(
         'fixed inset-x-0 top-0 z-50 transition-[background-color,box-shadow] duration-300',
-        rolou || aberto ? 'bg-creme/95 shadow-[0_1px_0_rgba(31,42,55,.08)] backdrop-blur' : 'bg-creme/0',
+        rolou || aberto ? 'bg-creme/95 shadow-[0_1px_0_rgba(31,42,55,.08)] backdrop-blur' : 'bg-escuro/0',
       )}
     >
       <nav aria-label="Principal" className="mx-auto flex h-16 max-w-site items-center gap-2 px-4 sm:gap-4 sm:px-6 lg:h-[4.5rem]">
         <a href="#topo" className="mr-auto rounded-md" aria-label={`${site.nome}, voltar ao topo`}>
-          {logo}
+          {rolou || aberto ? logo : logoClaro}
         </a>
 
         <ul className="hidden items-center gap-1 lg:flex">
@@ -40,7 +40,10 @@ export function Navbar({ logo }: { logo: ReactNode }) {
             <li key={l.href}>
               <a
                 href={l.href}
-                className="rounded-full px-3.5 py-2 text-[0.98rem] font-semibold text-tinta/80 transition-colors hover:bg-teal-claro hover:text-teal"
+                className={cn(
+                  'rounded-full px-3.5 py-2 text-[0.98rem] font-semibold transition-colors',
+                  rolou ? 'text-tinta/80 hover:bg-teal-claro hover:text-teal' : 'text-white/85 hover:bg-white/10 hover:text-white',
+                )}
               >
                 {l.label}
               </a>
@@ -61,7 +64,10 @@ export function Navbar({ logo }: { logo: ReactNode }) {
           aria-expanded={aberto}
           aria-controls="menu-mobile"
           aria-label={aberto ? site.nav.fecharMenu : site.nav.abrirMenu}
-          className="-mr-1 inline-flex h-11 w-11 items-center justify-center rounded-full text-tinta hover:bg-teal-claro lg:hidden"
+          className={cn(
+            '-mr-1 inline-flex h-11 w-11 items-center justify-center rounded-full lg:hidden',
+            rolou || aberto ? 'text-tinta hover:bg-teal-claro' : 'text-white hover:bg-white/10',
+          )}
         >
           {aberto ? <X aria-hidden="true" className="h-6 w-6" /> : <Menu aria-hidden="true" className="h-6 w-6" />}
         </button>
