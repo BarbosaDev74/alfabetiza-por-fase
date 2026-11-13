@@ -2,6 +2,7 @@
 
 import { useEffect, useState, type ReactNode } from 'react';
 import { ArrowRight } from 'lucide-react';
+import { site } from '@/config/site';
 import { track, urlComParametros } from '@/lib/tracking';
 import { cn } from '@/lib/utils';
 import { classeCompra } from './Botoes';
@@ -22,7 +23,7 @@ export function BotaoCheckout({
   return (
     <a
       href={href}
-      onClick={() => track('InitiateCheckout', { currency: 'BRL', value: 19.9 })}
+      onClick={() => track('InitiateCheckout', { currency: 'BRL', value: site.descontos.precoNum })}
       className={cn(classeCompra, className)}
     >
       {children}

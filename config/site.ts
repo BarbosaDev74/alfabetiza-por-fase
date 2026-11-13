@@ -7,9 +7,9 @@ export type FaseId = 1 | 2 | 3 | 4;
 
 export const site = {
   nome: 'Alfabetiza por Fase',
-  preco: 'R$ 19,90',
-  /** Preço em que a versão anterior (Kit Alfabetização Estruturada) estava sendo vendida. */
-  precoAncora: 'R$ 79,90',
+  preco: 'R$\u00a024,90',
+  /** Preço cheio (informado pelo Gabriel em 13/11/2026). */
+  precoAncora: 'R$\u00a099,60',
   rotuloAncora: 'De',
   rotuloPreco: 'por',
   srAncora: 'Preço anterior:',
@@ -53,7 +53,7 @@ export const site = {
       'Toda turma tem aquele aluno que trava e olha pro caderno sem sair nada. Em 10 minutos, o Alfabetiza por Fase descobre a fase de cada aluno e gera a ficha certa pra cada grupo, pronta pra imprimir.',
     ctaPrimario: 'Quero a ficha certa pra cada aluno',
     ctaSecundario: 'Ver como seus alunos escrevem',
-    micro: ['R$ 19,90, pagamento único', 'Garantia de 7 dias', 'Acesso na hora, por e-mail'],
+    micro: ['R$ 24,90, pagamento único', 'Garantia de 7 dias', 'Acesso na hora, por e-mail'],
     videoAlt: 'Gravação do app: a turma separada nas 4 fases, com o nome de cada aluno',
     legendaVideo: 'O app de verdade: sua turma separada por fase',
   },
@@ -280,16 +280,17 @@ export const site = {
 
   /**
    * Pop-ups de desconto. {pct} e {economia} são calculados a partir de precoNum e precoAncoraNum.
-   * Os dois descontos são reais: R$ 79,90 era o preço da oferta anterior, e os extras têm 40% OFF no checkout.
+   * Os dois descontos são reais: R$ 99,60 é o preço cheio, e os extras têm 40% OFF no checkout.
+   * {ancora} e {preco} vêm de precoAncora e preco, para o pop-up nunca ficar com preço velho.
    */
   descontos: {
-    precoNum: 19.9,
-    precoAncoraNum: 79.9,
+    precoNum: 24.9,
+    precoAncoraNum: 99.6,
     pctExtras: 40,
     avisos: [
       {
         selo: '{pct}% OFF',
-        titulo: 'De R$ 79,90 por R$ 19,90',
+        titulo: 'De {ancora} por {preco}',
         texto: 'Você economiza R$ {economia} no Alfabetiza por Fase.',
         cta: 'Garantir meus {pct}% OFF',
       },
@@ -317,7 +318,7 @@ export const site = {
       selo: 'Desconto exclusivo',
       titulo: 'Antes de sair: seu desconto de {pct}% ainda está aqui',
       linhas: [
-        'Alfabetiza por Fase de R$ 79,90 por R$ 19,90',
+        'Alfabetiza por Fase de {ancora} por {preco}',
         '{pctExtras}% OFF nos materiais extras do checkout',
         'Garantia de 7 dias, com 100% do valor de volta',
       ],
