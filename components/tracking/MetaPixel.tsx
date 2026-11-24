@@ -2,7 +2,6 @@
 
 import Script from 'next/script';
 import { useEffect } from 'react';
-import { site } from '@/config/site';
 import { track } from '@/lib/tracking';
 
 const PIXEL_ID = process.env.NEXT_PUBLIC_META_PIXEL_ID;
@@ -16,7 +15,7 @@ export function MetaPixel() {
     const obs = new IntersectionObserver(
       ([e]) => {
         if (e?.isIntersecting) {
-          track('ViewContent', { content_name: 'Alfabetiza por Fase', currency: 'BRL', value: site.descontos.precoNum });
+          track('ViewContent', { content_name: 'Alfabetiza por Fase', currency: 'BRL', value: 19.9 });
           obs.disconnect();
         }
       },
